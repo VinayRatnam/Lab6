@@ -32,8 +32,9 @@ def main():
         if menu_option == 1:
             raw = input("Please enter your password to encode: ")
             current = encoder(raw) #stores encoded password
-            print("Your password has been encoded and stored!")
-        elif menu_option == 3:
+            print("Your password has been encoded and stored!\n")
+
+        elif menu_option == 3: #ends program
             break
 
 
