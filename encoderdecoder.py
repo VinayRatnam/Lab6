@@ -1,5 +1,12 @@
 #VinayRatnam
 
+def menu():
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit\n")
+
 def encoder(original):
     """encodes the original password into an encoded password"""
     encoded = ""
@@ -18,11 +25,7 @@ def encoder(original):
 def main():
     while True:
         #menu for the encoder/decoder
-        print("Menu")
-        print("-------------")
-        print("1. Encode")
-        print("2. Decode")
-        print("3. Quit\n")
+        menu()
 
         current = ""
         menu_option = int(input("Please enter an option: "))
