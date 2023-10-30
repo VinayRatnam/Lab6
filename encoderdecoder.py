@@ -19,7 +19,19 @@ def encoder(original):
         elif val == "<":
             val = "2"
         encoded += val
-    return encoded
+    return
+
+def decode(encoded_pw):
+    if len(encoded_pw) != 8:
+        return "Your encoded password is required to be 8 digits long."
+
+    decoded_pw = ""
+
+    for digit in encoded_pw:
+            decoded_digit = str((int(digit) - 3) % 10)
+            decoded_pw += decoded_digit
+
+    return decoded_pw
 
 
 def main():
