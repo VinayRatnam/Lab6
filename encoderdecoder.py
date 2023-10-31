@@ -19,7 +19,7 @@ def encoder(original):
         elif val == "<":
             val = "2"
         encoded += val
-    return
+    return encoded
 
 def decode(encoded_pw):
     if len(encoded_pw) != 8:
@@ -45,7 +45,10 @@ def main():
             raw = input("Please enter your password to encode: ")
             current = encoder(raw) #stores encoded password
             print("Your password has been encoded and stored!\n")
-
+        elif menu_option == 2:
+            raw = input("Please enter your password to decode: ")
+            current = decode(raw)
+            print(f"The encoded password is {raw} and the original password is {decoded_pw}.")
         elif menu_option == 3: #ends program
             break
 
