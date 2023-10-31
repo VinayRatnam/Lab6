@@ -35,20 +35,19 @@ def decode(encoded_pw):
 
 
 def main():
+    current = ""
     while True:
         #menu for the encoder/decoder
         menu()
 
-        current = ""
         menu_option = int(input("Please enter an option: "))
         if menu_option == 1:
             raw = input("Please enter your password to encode: ")
             current = encoder(raw) #stores encoded password
             print("Your password has been encoded and stored!\n")
         elif menu_option == 2:
-            raw = input("Please enter your password to decode: ")
-            current = decode(raw)
-            print(f"The encoded password is {raw} and the original password is {decoded_pw}.")
+            original = decode(current)
+            print(f"The encoded password is {current}, and the original password is {original}.")
         elif menu_option == 3: #ends program
             break
 
